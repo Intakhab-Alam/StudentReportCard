@@ -1,0 +1,23 @@
+﻿@model IEnumerable<StudentReportCard.ViewModel.StudentMarksModel>
+
+<table class="table-condensed" style="width:100%">
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Total Marks</th>
+            <th>Marks Obtained</th>
+            <th>Percentage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SubjectName</td>
+                <td>@item.TotalMarks</td>
+                <td>@item.MarksObtained</td>
+                <td>@item.Percentage</td>
+            </tr>
+        }
+    </tbody>
+</table>
